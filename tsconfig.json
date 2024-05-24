@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"lib": ["es2020", "DOM"],
+		"target": "es2019",
+		"checkJs": true,
+		"esModuleInterop": true,
+		"noImplicitAny": true,
+		"preserveConstEnums": true,
+		"resolveJsonModule": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"sourceMap": true
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules"]
+}

@@ -1,0 +1,21 @@
+{
+	"name": "ami-auth0-scripts",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "node_modules/typescript/bin/tsc",
+		"update:users": "npm run build && node dist/update-users.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"auth0": "^4.4.0",
+		"dotenv": "^16.4.5",
+		"typescript": "^5.4.5",
+		"undici": "^6.18.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.12.12"
+	}
+}
