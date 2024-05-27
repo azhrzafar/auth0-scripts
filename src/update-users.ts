@@ -13,7 +13,9 @@ const processUsersUpdate = async () => {
 		return;
 	}
 
-	users.forEach(async (user, index) => {
+	let index = 1;
+
+	for (const user of users) {
 		console.log(`Updating user ${index + 1} of ${users.length}`);
 		const payload: UpdateUserData = {
 			given_name: user.user_metadata?.given_name ?? '',
@@ -25,7 +27,7 @@ const processUsersUpdate = async () => {
 		};
 
 		await authManagementService.updateUserId(user.user_id, payload);
-	});
+	}
 
 	console.log('Users updated successfully!');
 };
