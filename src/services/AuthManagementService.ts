@@ -3,6 +3,7 @@ import { GetUsers200ResponseOneOfInner, ManagementClient } from 'auth0';
 export interface UpdateUserData {
 	family_name: string;
 	given_name: string;
+	name: string;
 	user_metadata: {
 		family_name?: string | null;
 		given_name?: string | null;
