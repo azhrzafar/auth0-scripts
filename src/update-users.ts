@@ -23,17 +23,16 @@ const processUsersUpdate = async () => {
 			? user_metadata?.given_name
 			: !!user.given_name?.trim()
 			? user.given_name
-			: user.email.split('@')[0];
+			: user.name.split(' ')[0];
 		const family_name = !!user_metadata?.family_name?.trim()
 			? user_metadata?.family_name
 			: !!user.family_name?.trim()
 			? user.family_name
-			: user.email.split('@')[0];
+			: user.name.split(' ')[1] ?? ' ';
 
 		const payload: UpdateUserData = {
 			given_name,
 			family_name,
-			name: `${given_name} ${family_name}`,
 			user_metadata: {
 				given_name: null,
 				family_name: null,

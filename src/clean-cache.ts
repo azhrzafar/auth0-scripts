@@ -15,7 +15,7 @@ const scanAndCleanCache = async (pattern: string) => {
 	if (response?.keys) {
 		let i = 1;
 		for (const key of response.keys) {
-			console.log(`Deleting key "${key}" - ${i} of ${response.keys.length}`);
+			console.log(`Deleting key "${key}" - ${i++} of ${response.keys.length}`);
 			await client.del(key);
 		}
 	}
